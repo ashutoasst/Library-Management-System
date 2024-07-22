@@ -52,16 +52,12 @@ Python
 mysql-connector-python library
 Steps
 Clone the repository:
-
-sh
-Copy code
-git clone https://github.com/yourusername/library-management-system.git
+git clone https://github.com/ashutoasst/library-management-system.git
 cd library-management-system
 Set up the database:
 
 Create the database and tables in MySQL.
 sql
-Copy code
 CREATE DATABASE lmanage;
 USE lmanage;
 
@@ -89,22 +85,16 @@ CREATE TABLE submit (
 );
 Install the required Python library:
 
-sh
-Copy code
 pip install mysql-connector-python
 Configure the database connection:
 
 Update the database connection settings in the Python script (if necessary).
 Run the application:
 
-sh
-Copy code
 python app.py
 Usage
 Run the script:
 
-sh
-Copy code
 python app.py
 Enter the username:
 
@@ -121,16 +111,9 @@ Main Menu:
 Contributing
 Contributions are welcome! Please follow these steps to contribute:
 
-Fork the repository.
-Create a new branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/YourFeature).
-Open a pull request.
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 Contact
 For any questions or suggestions, feel free to contact me at:
 
 Email: ashutoshtripathi5914@gmail.com
+
 GitHub: [ashutoasst](https://github.com/ashutoasst/Library-Management-System/edit/main/README.md)
