@@ -1,119 +1,39 @@
 # Library-Management-System
 
 Library Management System
-Table of Contents
-Introduction
-Features
-Technologies Used
-Database Schema
-Installation
-Usage
-Contributing
-License
-Contact
 Introduction
 The Library Management System is a simple project designed to manage library operations such as tracking book inventory, issuing books, and handling book returns. This system facilitates the management of library resources and ensures efficient tracking of book availability.
 
 Features
-Add Book: Add new books to the library inventory.
-Issue Book: Issue books to library members.
-Submit Book: Handle the return of issued books.
-Delete Book: Remove books from the inventory.
-Display Books: Display the list of all books available in the library.
+This system offers several key features, including the ability to add new books to the library inventory, issue books to library members, handle the return of issued books, remove books from the inventory, and display the list of all books available in the library.
+
 Technologies Used
-Backend: MySQL for database management
-Programming Language: Python
-Libraries: mysql-connector-python for connecting Python with MySQL
+The project uses MySQL for database management and Python as the programming language. The mysql-connector-python library is used to connect Python with MySQL.
+
 Database Schema
-The database schema consists of the following tables:
+The database schema consists of three main tables:
 
-Books: Stores information about books.
+Books: This table stores information about books, including the book name (bname), book code (bcode), total number of copies available (total), and subject (subject).
 
-bname (VARCHAR): Name of the book
-bcode (VARCHAR, Primary Key): Unique code for each book
-total (INT): Total number of copies available
-subject (VARCHAR): Subject or genre of the book
-Issue: Tracks book loans.
+Issue: This table tracks book loans, including the name of the person issuing the book (name), their registration number (regno), the code of the issued book (bcode), and the issue date (idate).
 
-name (VARCHAR): Name of the person issuing the book
-regno (VARCHAR): Registration number of the person
-bcode (VARCHAR, Foreign Key): Code of the issued book
-idate (DATE): Issue date
-Submit: Tracks book returns.
+Submit: This table tracks book returns, including the name of the person returning the book (name), their registration number (regno), the code of the returned book (bcode), and the submission date (sdate).
 
-name (VARCHAR): Name of the person returning the book
-regno (VARCHAR): Registration number of the person
-bcode (VARCHAR, Foreign Key): Code of the returned book
-sdate (DATE): Submission date
 Installation
-Prerequisites
-MySQL Server
-Python
-mysql-connector-python library
-Steps
-Clone the repository:
-git clone https://github.com/ashutoasst/library-management-system.git
-cd library-management-system
-Set up the database:
+To set up the project, first ensure you have MySQL Server and Python installed. Then, clone the repository using git clone https://github.com/ashutoasst/library-management-system.git and navigate into the project directory with cd library-management-system.
 
-Create the database and tables in MySQL.
-sql
-CREATE DATABASE lmanage;
-USE lmanage;
+Next, set up the database by creating the necessary tables in MySQL. You can use the provided SQL commands to create the books, issue, and submit tables. After setting up the database, install the required Python library with pip install mysql-connector-python. Update the database connection settings in the Python script if necessary, and then run the application using python app.py.
 
-CREATE TABLE books (
-    bname VARCHAR(255),
-    bcode VARCHAR(255) PRIMARY KEY,
-    total INT,
-    subject VARCHAR(255)
-);
-
-CREATE TABLE issue (
-    name VARCHAR(255),
-    regno VARCHAR(255),
-    bcode VARCHAR(255),
-    idate DATE,
-    FOREIGN KEY (bcode) REFERENCES books(bcode)
-);
-
-CREATE TABLE submit (
-    name VARCHAR(255),
-    regno VARCHAR(255),
-    bcode VARCHAR(255),
-    sdate DATE,
-    FOREIGN KEY (bcode) REFERENCES books(bcode)
-);
-Install the required Python library:
-
-pip install mysql-connector-python
-Configure the database connection:
-
-Update the database connection settings in the Python script (if necessary).
-Run the application:
-
-python app.py
 Usage
-Run the script:
+To use the system, run the script python app.py. You will be prompted to enter a username, and a random password will be generated and displayed. Enter this password to access the main menu. The main menu offers options to add books, issue books, submit books, delete books, and display all books in the library.
 
-python app.py
-Enter the username:
-
-A random password will be generated and displayed.
-Enter the displayed password to access the main menu.
-
-Main Menu:
-
-1. Add book: Add new books to the library.
-2. Issue book: Issue books to members.
-3. Submit book: Return issued books.
-4. Delete book: Remove books from the library.
-5. Display book: Display all books in the library.
 Contributing
-Contributions are welcome! Please follow these steps to contribute:
+Contributions to the project are welcome! To contribute, fork the repository, create a new branch, commit your changes, push to the branch, and open a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Contact
-For any questions or suggestions, feel free to contact me at:
+For any questions or suggestions, feel free to contact me at ashutoashtripathi563@gmail.com or on GitHub at ashutoasst .
 
-Email: ashutoshtripathi5914@gmail.com
 
-GitHub: [ashutoasst](https://github.com/ashutoasst/Library-Management-System/edit/main/README.md)
